@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/base_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:elevation="2dp"
+            android:scaleType="fitStart"
+            android:layout_margin="10dp"
+            tools:src="@drawable/baselayout" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="22sp"
+            android:layout_below="@+id/base_layout"
+            android:text="drag zoom images!"
+
+            android:textColor="#FFDE03"
+
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:background="#000000"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/element1"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="340dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image_element1"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/element2"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="340dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/image_element2"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/help_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:text="Memories"
+        android:textColor="#FFDE03"
+
+        android:textStyle="bold"
+        android:background="#000000"
+        android:layout_above="@+id/progressbar"
+        android:gravity="center_horizontal" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:backgroundTint="@android:color/white"
+        android:indeterminate="true"
+        android:indeterminateTint="#1a09d6"
+        android:max="100"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:background="@drawable/baseline_save_alt_black_18dp"
+            android:textColor="@color/colorAccent"
+            android:layout_margin="4dp"
+            android:paddingRight="50dp"
+
+            android:enabled="true"
+            />
+
+        <Button
+            android:id="@+id/select_images_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/colorAccent"
+            android:layout_margin="4dp"
+            android:background="@drawable/baseline_photo_library_black_18dp"
+
+            />
+
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/baseline_share_black_18dp"
+            android:textColor="@color/colorAccent"
+            android:layout_margin="4dp"
+            android:layout_marginLeft="30dp"
+            android:enabled="true"/>
+
+        <ImageButton
+            android:id="@+id/clearall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/trashcan"
+            android:visibility="visible"
+            android:layout_marginLeft="60dp"/>
+    </LinearLayout>
+</RelativeLayout>
